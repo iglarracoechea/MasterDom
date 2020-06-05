@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <meta charset="utf-8"> 
+                <meta name="author" content="Ignacio Larracoechea">
+                <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                <link rel="stylesheet" type="text/css" href="">
+                <title>Ejercicio Dom</title>
+
+                <style>
+                    label{
+                        display: block;
+                        margin-bottom: 1em;
+                    }
+
+                    div{
+                        width: 250px;
+                        height: 250px;
+                        background-color: lightblue;
+                        border: 5px solid grey;
+                        margin: 2em;
+                        padding: .5em;
+                    }
+
+                    .title{
+                        color: red;
+                        font-size: 1.5em;
+                        text-decoration: solid underline grey 5px;
+                    }
+                </style>
+        </head>
+        <body></body>
+            <h1>Formulario de ingreso:</h1>
+            <form action="#" id="formulario">
+                <label>
+                    <strong>Nombre:</strong>
+                    <input id="names">
+                    <span id="span-name"></span>
+                </label>
+                <label>
+                    <strong>Apellido:</strong>
+                    <input id="surnames">
+                </label>
+                <label>
+                    <strong>Edad:</strong>
+                    <input id="age">
+                </label>
+                <button>Enviar</button>
+            </form>
+
+            <div id="content">
+                <h1 class='title 'id="title"><strong>Información del usuario</strong></h1>
+
+            </div>
+
+            <script type="text/javascript" src="ejDom.js"></script>
+        </body>
+</html>
