@@ -20,6 +20,11 @@ getUsuarios() //esto es promesa
     .then(user => {
         mostrarJanet(user.data);
     })
+    .catch( error => {   //para capturar un error ej: si no hay internet, no existe la url, o la api esta caida
+        console.log(error+'Hay un error')
+        alert('Error en las peticiones') 
+    })  
+
 
 function getUsuarios(){
     return fetch('https://reqres.in/api/users?page=2')
