@@ -18,9 +18,10 @@ las promesas convienen cuando hay una concatenación de varios procesos asincron
 */
 
 const cuadradoPromise = (value)=>{
-    if(typeof value !== 'number') return Promise.reject(`Error el valor' ${value} ingresado no es un número`);
+    //if(typeof value !== 'number') return Promise.reject(`Error el valor' ${value} ingresado no es un número`);
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
+            if(typeof value !== 'number') return reject(`Error el valor' ${value} ingresado no es un número`);
             resolve({
                 value,   //propiedad y valor tiene el mismo nombre se puede simplificar
                 result:value*value,
