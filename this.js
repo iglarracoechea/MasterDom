@@ -46,6 +46,7 @@ obj2.imprimir() //devuelve 'Contexto objeto 2'
 
 const obj3 = {
     nombre:'obj3 Contexto Objeto 3',
+    //agarran el contexto donde fueron creados
     imprimir:() => {  //las arrow function no manejan su propio scope, en este caso obedece agarra del padre
         console.log(this.nombre) //no usarlas como metodo
     }
