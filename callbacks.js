@@ -8,6 +8,8 @@ crear funciones autoinvocadas-anonimas
 
 callback, una función que se va a ejecutar despues de que otra lo haga. Primer mecanismo de js 
 para trabajar la asincronia
+Es un mecanismo para asegurar que cierto código no se ejecute hasta que otro haya terminado.
+Una función de callback es una función que se pasa a otra función como un argumento
 
 callbackhell
 
