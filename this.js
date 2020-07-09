@@ -36,7 +36,7 @@ obj.imprimir()
 
 const obj2 = {
     nombre:'obj2 Contexto Objeto 2',
-    imprimir    //va a hacer referencia a la(function imprimir) pero mantiene el scope local
+    imprimir:imprimir    //va a hacer referencia a la(function imprimir) pero mantiene el scope local
 }
 
 obj2.imprimir() //devuelve 'Contexto objeto 2'
@@ -51,6 +51,21 @@ const obj3 = {
         console.log(this.nombre) //no usarlas como metodo
     }
 }
+
+obj3.imprimir()
+
+
+function Persona(nombre){
+    this.nombre = nombre;
+    //return console.log(this.nombre) //hace referencia a nombre de la function Persona
+    return function(){  //crea nuevo scope y al no tener una variable local 'nombre', va a hacer referencia a la global 
+        console.log(this.nombre,22) //muestra contexto global-1
+    }
+    //return () => console.log(this.nombre,77)
+}
+
+let ign = new Persona('Ignacio')
+ign()  
 
 obj3.imprimir()
 
