@@ -45,3 +45,36 @@ const otraPersona = {
 }
 
 otraPersona.saludar(); //devuelve undefined
+
+
+var myButton = {
+	content: 'OK',
+	click() {
+	  console.log(this.content + ' clicked');
+	}
+};
+  
+myButton.click();
+  
+var looseClick = myButton.click;
+looseClick(); // not bound, 'this' is not myButton - it is the globalThis
+  
+var boundClick = myButton.click.bind(myButton);
+boundClick();
+
+
+
+this.x = 9;
+var module = {
+  x: 81,
+  getX: function(){ console.log(this.x)}
+};
+
+module.getX(); // 81
+
+var getX = module.getX;
+getX(); // 9, porque en este caso, "this" apunta al objeto global
+
+// Crear una nueva función con 'this' asociado al objeto original 'module'
+var boundGetX = getX.bind(module);
+boundGetX(); // 81
