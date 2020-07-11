@@ -1,0 +1,11 @@
+{
+    "cadena":"Igna",
+    "numero": 35,
+    "booleano":true,
+    "arreglo":["correr","programar","cocinar"],
+    "objeto":{
+        "twitter":"@Ignazio_AL",
+        "email":"ignaciolarracoechea@gmail.com"
+    },
+    "nulo":"null"
+}
