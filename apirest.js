@@ -49,10 +49,53 @@ Propiedades rest:
 
 Todo, en la web, es un recurso y debe:
 
-Tener un identificador único(uri)
+Tener un identificador único(url)
 Estar representado por un formato(xml,json,jpeg,etc)
 Poderse representar con diferentes formatos
 
 Las comunicaciones no tienen estado
+
+
+subdominio https://api.ed.team/cursos/conceptos-de-api
+
+luego del / vienen las rutas(routes)
+
+content types:
+
+formatos:
+
+text/plain = sin formato
+text/html
+text/xml
+application/json
+image/jpeg
+image/png
+
+
+Todas las peticiones son sin estado: cada peticion que hago es una nueva que no sabe nada de la anterior. 
+Por eso se usan las cookies y tokens
+las cookies se usan en los navegadores
+los tokens desde el servidor se genera un archivo de texto donde va la información del usuario que se logeo/registrado
+y el servidor firma esos tokens, y si alguien intenta modificar la información del token el servidor se da cuenta, 
+porque la firma es unica y si se hace alguna modificacion la firma ya no sirve. Se usan desde el backend
+
+en cada peticion el servidor verifica en el token la información del usuario
+
+
+idempotencia
+caracteristica que hace que aunque se realize una acción muchas veces la respuesta va hacer siempre la misma
+get, put, delete
+
+post = no idempotente
+
+hateoas:los recursos no son auto descriptivos
+en api rest no hay una auto documentación
+dentro del json hay que tener una propiedad dentro del recurso que identifique el siguiente elemento, 
+el anterior o el self
+
+"self"; "/persons/10"
+"preview": "/persons/9"
+"next": "/persons/11"
+
 
 */
